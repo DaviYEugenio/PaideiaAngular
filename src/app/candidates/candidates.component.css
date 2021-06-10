@@ -1,0 +1,127 @@
+h1 {
+  font-size: 40px;
+  font-family: Verdana, Tahoma, sans-serif;
+  color: rgb(19, 33, 71);
+  text-align: center;
+  margin: 5;
+}
+h3{
+  font-size: 30px;
+}
+h5 {
+  text-align: center;
+  font-size: 20px;
+}
+
+button {
+  color: black;
+}
+
+form {
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+
+.card {
+  background-color:  rgb(240, 240, 240);
+  border: rgb(19, 33, 71) solid 2px;
+  border-radius: 10px;
+  margin: 80px;
+}
+.alert{
+  margin-top: 32vh;
+  padding: 35px 0px;
+height: 170px;
+background-color: rgb(66, 219, 19);
+text-align: center;
+}
+.alert2{
+  margin-top: 60px;
+  color: black;
+  width: 100%;
+  height: 15vh;
+  padding: 13px;
+background-color: rgb(219, 19, 19);
+text-align: center;
+}
+
+.card-body {
+  background-color: rgb(240, 240, 240);
+  border: transparent solid;
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: rgb(240, 240, 240);
+  border: transparent solid;
+  border-radius: 10px;
+}
+
+.form-row {
+  margin: 50px;
+}
+
+.container__conteudo__link {
+  color: white;
+  text-decoration: none;
+  border: 1px solid green;
+  background-color: rgb(0, 128, 17);
+  border-radius: 7px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.container__conteudo__link:hover {
+  background-color: rgb(75, 252, 6);
+  border: 0;
+  cursor: pointer;
+}
+
+.aling {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__conteudo__back {
+  color: white;
+  text-decoration: none;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 7px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.container__conteudo__back:hover {
+  background-color: black;
+  border: 0;
+  cursor: pointer;
+}
+
+.aling__2 {
+  text-align: right;
+  align-items: right;
+  justify-content: right;
+}
+
+.container__aling {
+  display: inline-flex;
+}
+
+.btn-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+}
+.espaco {
+  width: 100vh;
+  height: 6vh;
+}
+

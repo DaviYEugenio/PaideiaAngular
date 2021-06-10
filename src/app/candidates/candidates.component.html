@@ -1,0 +1,114 @@
+<div *ngIf="test == 0 || test == 2; else vazio">
+  <div class="espaco"></div>
+<div class="form-group"></div>
+  <h1>CADASTRAR CANDIDATO</h1>
+  <div *ngIf="test == 2">
+  <div class="alert2" role="alert" id="alertsuccess2">
+    <h3>USUÁRIO JÁ CADASTRADO!</h3>
+</div>
+</div>
+  <form class="formulario" (ngSubmit)="Cadastrar()">
+    <div class="card" id="card1">
+      <div style="pointer-events: none;" class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button  id="candidate" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+          aria-controls="collapseOne">
+          INFORMAÇÕES DO CANDIDATO
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <div class="form-row ">
+          <div class="form-group col-md-3">
+            <label class="control-label">Treinamento <span class="text-danger">(Campo Obrigatório)</span></label>
+            <br />
+            <select class="form-control" [(ngModel)]="TrainingId" name="TrainingId">
+              <option *ngFor="let candidate of candidates" value="{{candidate.id}}">{{candidate.name}}</option>
+            </select>
+          </div>
+            <div class="form-group col-md-3">
+              <label class="control-label">Nome <span class="text-danger" id="name">(Campo Obrigatório)</span></label>
+              <input class="form-control" id="Name" [(ngModel)]="name" name="name" required />
+            </div>
+            <div class="form-group col-md-3">
+              <label class="control-label">Email <span class="text-danger" id="email">(Campo Obrigatório)</span></label>
+              <input type="email" id="Email" class="form-control" [(ngModel)]="Email" name="Email" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="control-label">Cônjuge fará o trinamento?</label>
+              <br />
+              <select class="form-control" [(ngModel)]="SpouseTraining" name="SpouseTraining" required>
+                <option selected value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label lass="control-label">Telefone <span class="text-danger" id="tel">(Campo Obrigatório)</span></label>
+              <input id="Tel" class="form-control" [(ngModel)]="Fone"
+                name="Fone" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="control-label">Celular <span class="text-danger" id="cell">(Campo Obrigatório)</span></label>
+              <input  id="Cell" class="form-control"  [(ngModel)]="Cell"
+              name="Cell" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="control-label">Telefone Comercial <span class="text-danger" id="telCome">(Campo Obrigatório)</span></label>
+              <input  id="TelCome" class="form-control" id="FoneComercial" [(ngModel)]="FoneComercial" name="FoneComercial" required>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-6">
+              <label  class="control-label">Igreja <span class="text-danger" id="church">(Campo Obrigatório)</span></label>
+              <input  id="Church" class="form-control" [(ngModel)]="Church" name="church" required/>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="control-label">É da IBPV?</label>
+              <br />
+              <select class="form-control" [(ngModel)]="IsFromIBPV" name="IsFromIBPV" required>
+                <option selected value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="control-label">É pastor ou missionário?</label>
+              <br />
+              <select class="form-control" [(ngModel)]="ShepherdOrMissionary" name="ShepherdOrMissionary" required>
+                <option selected value="Pastor">Pastor</option>
+                <option value="Missionário">Missionário</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12 d-md-flex justify-content-md-center">
+              <button type="submit" class="container__conteudo__link" id="btnCadastrar">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+  <ng-template #vazio>
+    <div class="alert" role="alert" id="alertsuccess">
+      <h1>CADASTRO REALIZADO COM SUCESSO!</h1>
+  </div>
+  </ng-template>
+  <script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256–2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      setTimeout(function () {
+        $('#alertsuccess2').hide()
+      }, 8000);
+    });
+    </script>
+
+
+
+
+
+
+
